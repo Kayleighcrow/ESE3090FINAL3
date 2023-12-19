@@ -23,7 +23,7 @@ primaryColor="#FF8B3D"
 # DEFINITIONS
 
 def model_predict():
-    model_file = 'GA_UPDATED_Decoder.h5' 
+    model_file = load_model('GA_UPDATED_Decoder.h5', compile=False)
     user_input = [cut_edges_input, pf_input]
     user_input = tf.convert_to_tensor(user_input)
     user_input = user_input * 0.01
